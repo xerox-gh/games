@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Afterglow Arcade — a curated collection of instant browser games." />
+    <title>Afterglow Arcade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Afterglow home">
+        <span class="brand-mark"><span></span><span></span><span></span></span>
+        <span>AFTERGLOW</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a class="active" href="#games">Arcade</a>
+        <a href="#collection">Collection</a>
+        <a href="#about">About</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="soundToggle" aria-label="Toggle sound"><span>◖</span><i></i></button>
+        <button class="profile-button" aria-label="Player profile"><span>PL</span></button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="eyebrow"><span></span> The arcade never closes</div>
+        <h1 id="hero-title">Press play.<br /><em>Lose track of time.</em></h1>
+        <p>Hand-picked browser games for quick breaks, long nights, and everything in between. No installs. No waiting.</p>
+        <div class="hero-actions">
+          <button class="primary-button" data-play="snake"><span>▶</span> Play something</button>
+          <a class="text-link" href="#games">Explore the arcade <span>↓</span></a>
+        </div>
+        <div class="stats" aria-label="Arcade stats">
+          <div><strong>12</strong><span>Games</span></div>
+          <div><strong>05</strong><span>Playable now</span></div>
+          <div><strong>∞</strong><span>Good times</span></div>
+        </div>
+      </section>
+
+      <section class="featured" aria-label="Featured game">
+        <div class="featured-orbit orbit-one"></div><div class="featured-orbit orbit-two"></div>
+        <div class="feature-content">
+          <div class="feature-label">✦ &nbsp;Game of the week</div>
+          <h2>NEON<br />SERPENT</h2>
+          <p>A familiar classic, rebuilt for the after-hours. Chase the glow. Beat your best.</p>
+          <button class="light-button" data-play="snake">Play now <span>↗</span></button>
+        </div>
+        <div class="snake-art" aria-hidden="true">
+          <span class="pixel p1"></span><span class="pixel p2"></span><span class="pixel p3"></span><span class="pixel p4"></span>
+          <span class="pixel p5"></span><span class="pixel p6"></span><span class="pixel p7"></span><span class="pixel p8"></span><span class="pixel food"></span>
+        </div>
+        <span class="feature-number">01</span>
+      </section>
+
+      <section class="games-section" id="games">
+        <div class="section-heading">
+          <div><div class="eyebrow"><span></span> Pick your distraction</div><h2>THE COLLECTION</h2></div>
+          <div class="filters" role="group" aria-label="Filter games">
+            <button class="active" data-filter="all">All games</button>
+            <button data-filter="arcade">Arcade</button>
+            <button data-filter="puzzle">Puzzle</button>
+            <button data-filter="quick">Quick play</button>
+          </div>
+        </div>
+        <div class="game-grid" id="collection"></div>
+      </section>
+
+      <section class="manifesto" id="about">
+        <span class="big-quote">“</span>
+        <p>Games should be <em>simple to start</em><br />and impossible to put down.</p>
+        <span class="tiny-note">BUILT FOR THE LITTLE MOMENTS</span>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand" href="#top"><span class="brand-mark"><span></span><span></span><span></span></span><span>AFTERGLOW</span></a>
+      <p>Made for late nights and slow afternoons.</p>
+      <span>© 2026 — PLAY NICE</span>
+    </footer>
+
+    <dialog id="gameModal">
+      <div class="modal-head"><div><span id="modalKicker">NOW PLAYING</span><h2 id="modalTitle">Neon Serpent</h2></div><button id="closeModal" aria-label="Close game">×</button></div>
+      <div class="game-stage" id="gameStage"></div>
+      <div class="modal-foot"><p id="gameHelp"></p><button class="outline-button" id="restartGame">Restart</button></div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

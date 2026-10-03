@@ -1,0 +1,6 @@
+{
+  "name": "afterglow-arcade",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {"start": "npx serve .", "check": "node --check app.js"}
+}
